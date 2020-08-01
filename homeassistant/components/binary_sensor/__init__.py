@@ -37,6 +37,9 @@ DEVICE_CLASS_CONNECTIVITY = "connectivity"
 # On means open, Off means closed
 DEVICE_CLASS_DOOR = "door"
 
+# On means ring, Off means no ring (clear)
+DEVICE_CLASS_DOORBELL = "doorbell"
+
 # On means open, Off means closed
 DEVICE_CLASS_GARAGE_DOOR = "garage_door"
 
@@ -100,6 +103,7 @@ DEVICE_CLASSES = [
     DEVICE_CLASS_COLD,
     DEVICE_CLASS_CONNECTIVITY,
     DEVICE_CLASS_DOOR,
+    DEVICE_CLASS_DOORBELL,
     DEVICE_CLASS_GARAGE_DOOR,
     DEVICE_CLASS_GAS,
     DEVICE_CLASS_HEAT,

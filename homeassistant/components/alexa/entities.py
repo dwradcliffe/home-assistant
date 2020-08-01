@@ -622,6 +622,7 @@ class BinarySensorCapabilities(AlexaEntity):
     TYPE_CONTACT = "contact"
     TYPE_MOTION = "motion"
     TYPE_PRESENCE = "presence"
+    TYPE_DOORBELL = "doorbell"
 
     def default_display_categories(self):
         """Return the display categories for this entity."""
@@ -632,6 +633,8 @@ class BinarySensorCapabilities(AlexaEntity):
             return [DisplayCategory.MOTION_SENSOR]
         if sensor_type is self.TYPE_PRESENCE:
             return [DisplayCategory.CAMERA]
+        if sensor_type is self.TYPE_DOORBELL:
+            return [DisplayCategory.DOORBELL]
 
     def interfaces(self):
         """Yield the supported interfaces."""
@@ -674,6 +677,9 @@ class BinarySensorCapabilities(AlexaEntity):
 
         if attrs.get(ATTR_DEVICE_CLASS) == binary_sensor.DEVICE_CLASS_PRESENCE:
             return self.TYPE_PRESENCE
+
+        if attrs.get(ATTR_DEVICE_CLASS) == binary_sensor.DEVICE_CLASS_DOORBELL:
+            return self.TYPE_DOORBELL
 
 
 @ENTITY_ADAPTERS.register(alarm_control_panel.DOMAIN)

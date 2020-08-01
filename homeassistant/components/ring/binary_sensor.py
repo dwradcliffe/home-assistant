@@ -12,7 +12,7 @@ _LOGGER = logging.getLogger(__name__)
 
 # Sensor types: Name, category, device_class
 SENSOR_TYPES = {
-    "ding": ["Ding", ["doorbots", "authorized_doorbots"], "occupancy"],
+    "ding": ["Ding", ["doorbots", "authorized_doorbots"], "doorbell"],
     "motion": ["Motion", ["doorbots", "authorized_doorbots", "stickup_cams"], "motion"],
 }
 
